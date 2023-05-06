@@ -1,0 +1,414 @@
+{% extends "mainapp/base.html" %} 
+{% load static %}
+
+{% block content %}
+
+<div class="main_cont container-fluid">
+    <header>
+        <div class="header_top" style="background-color: white;"></div>
+        <div class="header_bottom">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid set-center-nav">
+                    <div style="max-width: 1300px;max-height: 75px;display: flex;justify-content: space-between;align-items: center;">
+                        <a class="navbar-brand" href="#">noWildberries</a>
+                        <!-- main_katalog_menu button -------->
+                        <button class="navbar-toggler" style="position: absolute;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- search -->
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+
+                        <div class="nav-links">
+                            <a class="nav-link-item" href="" style="margin-top: 9px;">
+                                <img src="{% static '/icons/icons-location.png' %}" style="height: 30px;width: 35px;">
+                                <p style="padding: 0;margin: 5px 0 0 0;color: white;">adress</p>
+                            </a>
+                            <a class="nav-link-item" href="" style="margin-top: 4px;">
+                                <img src="{% static '/icons/icons-cart.png' %}">
+                                <p style="padding: 0;margin: 5px 0 0 0;color: white;">basket</p>
+                            </a>
+                            <a class="nav-link-item" href="">
+                                <img src="{% static '/icons/icons-person.png' %}">
+                                <p style="padding: 0;margin: 5px 0 0 0;color: white;">login</p>
+                            </a>
+                        </div>
+        
+                        <!-- main_katalog_menu --------------->
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item dropdown">
+                                        <ul class="dropdown-menu dropdown-menu-dark" style="display: block;">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- главный контенер с продуктами -->
+    <div style="width: 100%;background-color: white;display: flex;justify-content: center;">
+        <div class="content-cont">
+
+            <!-- карусель -->
+            <div class="carousel">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner" style="border-radius: 15px;height: 618px;">
+                        <div class="carousel-item active">
+                            <img src="{% static '/img/carousel/berstengadden.png' %}" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/img/carousel/Deutschland.png' %}" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- типовые блоки по катологу -->
+            <div class="first-cards-cont flex-center">
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+                <div class="catalog-type-card card">
+                    <img src="{% static '/img/carousel/minecraft_illage.png' %}" class="card-img-top">
+                </div>
+            </div>
+
+            <!-- карточки товаров -->
+            <div class="second-cards-cont flex-center">
+                <h3 class="w-100" style="margin: 20px;">Хиты продаж</h3>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- блоки по типам каталога -->
+            <div class="type-cards-cont flex-center" style="margin-top: 20px;">
+                <div class="block-by-type-card card">
+                    <img src="{% static '/img/carousel/berstengadden.png' %}" class="card-img-top">
+                </div>
+                <div class="block-by-type-card card">
+                    <img src="{% static '/img/carousel/berstengadden.png' %}" class="card-img-top">
+                </div>
+            </div>
+
+              <!-- карточки товаров -->
+              <div class="second-cards-cont flex-center">
+                <h3 class="w-100" style="margin: 20px;">Хиты продаж</h3>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+                <div class="product-card card" style="width: 18rem;">
+                    <img src="{% static '/img/carousel/Deutschland.png' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">7 480 ₽</h5>
+                        <p class="card-text">Some quick example text to build on the</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        
+    </footer>
+
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <div style="display: flex;justify-content: center;">
+                <section class="mb-4" style="display: flex;flex-wrap: nowrap;">
+                    <!-- Facebook -->
+                    <a class="btn btn-floating m-1 footer-icons" href="#"><img src="{% static '/icons/icon_facebook.png' %}"></a>
+                    <!-- Twitter -->
+                    <a class="btn btn-floating m-1 footer-icons" href="#"><img src="{% static '/icons/icon_inst.png' %}"></a>
+                    <!-- Google -->
+                    <a class="btn btn-floating m-1 footer-icons" href="#"><img src="{% static '/icons/icon_phone.png' %}"></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-floating m-1 footer-icons" href="#"><img src="{% static '/icons/icon_vk.png' %}"></a>
+                    <!-- VK -->
+                    <a class="btn btn-floating m-1 footer-icons" href="#"><img src="{% static '/icons/icon_whatsapp.png' %}"></a>
+                  </section>
+            </div>
+
+          <section class="">
+            <form action="">
+              <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                  <p class="pt-2">
+                    <strong>Sign up for our newsletter</strong>
+                  </p>
+                </div>
+
+                <div class="col-md-5 col-12">
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example24" class="form-control">
+                    <label class="form-label" for="form5Example24" style="margin-left: 0px;">Email address</label>
+                  <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                </div>
+
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-outline-light mb-4">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="mb-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+              repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+              harum corrupti dicta, aliquam sequi voluptate quas.
+            </p>
+          </section>
+
+          <section class="">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#" class="text-white">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-white">Link 4</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+      </footer>
+</div>
+
+{% endblock %}

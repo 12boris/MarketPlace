@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700');
+
+
+    /* шаблонные стили --------------------- */
+
+    @keyframes load {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .load-animate {
+        animation: load .4s both;
+    }
+
+    a{
+        color: #000;
+    }
+
+    .w-100{
+        width: 100%;
+    }
+
+    .flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .abs-top-0{
+        position: absolute;
+        top: 0;
+    }
+
+    .abs-bot-0{
+        position: absolute; 
+        bottom: 0;
+    }
+
+    /* css classes ------------- */
+
+    /* main page */
+
+    /* header */
+
+    header{
+        width: 100%;
+        background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+    }
+
+    header div{
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 0px;
+    }
+
+    .header_top{
+        margin-top: 20px;
+    }
+    
+    .header_bottom{
+        min-height: 50px;
+        display: inline;
+    }
+
+    .navbar-brand{
+        margin-left: 67px;
+    }
+
+    .nav-links{
+        display: flex;
+        width: max-content;
+    }
+
+    .nav-link-item{
+        padding: 0 8px 0 8px;
+        margin: 0 10px 0 10px;
+    }
+    
+    .set-center-nav{
+        padding: 0 20px 0 20px;
+        width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .offcanvas.offcanvas-end{
+        left: 0;
+        border-left: none;
+        border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    }
+
+    /* content */
+
+    .main_cont{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+        padding: 0;
+    }
+
+    .content-cont{
+        padding: 0 20px 0 20px;
+        max-width: 1300px;
+        margin-bottom: 30px;
+    }
+
+    .carousel{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* типовые блоки по катологу */
+
+    .catalog-type-card{
+        border-radius: 10px;
+        width: 18rem;
+        margin: 10px;
+    }
+
+    .catalog-type-card img{
+        border-radius: 10px;
+    }
+
+    /* карточки товаров */
+
+    .product-card{
+        margin: 8px;
+        height: 22rem;
+    }
+
+    .product-card img{
+        height: 100%;
+    }
+
+    /* блоки по типам каталога */
+
+    .block-by-type-card{
+        width: 47%;
+        height: 17rem;
+        margin: 8px;
+        border: none;
+    }
+
+    .block-by-type-card img{
+        height: 16rem;
+        border-radius: 16px;
+    }
+
+    /* footer */
+
+    .footer-icons{
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        transition: .4s;
+    }
+    .footer-icons img{
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .footer-icons:hover{
+        border: 1px solid white;
+        background-color: #373739;
+    }
