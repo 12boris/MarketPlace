@@ -88,6 +88,11 @@
         justify-content: center !important;
     }
 
+    .nav-item, .navbar-nav{
+        width: max-content;
+        padding: 10px 0;
+    }
+
     .offcanvas.offcanvas-end{
         left: 0;
         border-left: none;
@@ -153,6 +158,11 @@
     }
 
     /* footer */
+
+    footer{
+        background-color: #481173;
+        width: 100%;
+    }
 
     .footer-icons{
         width: 3rem;

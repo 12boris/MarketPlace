@@ -10,7 +10,7 @@
             <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid set-center-nav">
                     <div style="max-width: 1300px;max-height: 75px;display: flex;justify-content: space-between;align-items: center;">
-                        <a class="navbar-brand" href="#">noWildberries</a>
+                        <a class="navbar-brand" href="{% url 'mainapp:index' %}">noWildberries</a>
                         <!-- main_katalog_menu button -------->
                         <button class="navbar-toggler" style="position: absolute;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -38,36 +38,52 @@
                         </div>
         
                         <!-- main_katalog_menu --------------->
-                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="width: max-content;padding-right: 0;">
+                            <div class="offcanvas-header" style="width: 96%;">
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" style="position: absolute;right: 15px;"></button>
                             </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item dropdown">
+                            <div class="offcanvas-body" style="padding-right: 10px;">
+                                <div class="navbar-nav pe-3" style="display: -webkit-box;padding-right: 0;">
+                                    <div class="nav-item dropdown">
+                                        <ul class="dropdown-menu dropdown-menu-dark main-dropdown" style="display: block;padding-right: 10px;width: max-content;">
+                                          <li><a class="dropdown-item women" href="#">Женщинам</a></li>
+                                          <li><a class="dropdown-item shoes" href="#">Обувь</a></li>
+                                          <li><a class="dropdown-item" href="#">Детям</a></li>
+                                          <li><a class="dropdown-item" href="#">Мужчинам</a></li>
+                                          <li><a class="dropdown-item" href="#">Дом</a></li>
+                                          <li><a class="dropdown-item" href="#">Красота</a></li>
+                                          <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                                          <li><a class="dropdown-item" href="#">Электроника</a></li>
+                                          <li><a class="dropdown-item" href="#">Игрушки</a></li>
+                                          <li><a class="dropdown-item" href="#">Мебель</a></li>
+                                          <li><a class="dropdown-item" href="#">Товары для взрослых</a></li>
+                                          <li><a class="dropdown-item" href="#">Продукты</a></li>
+                                          <li><a class="dropdown-item" href="#">Бытовая техника</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="nav-item dropdown links-category-women" style="display: none;padding-left: 12px;">
                                         <ul class="dropdown-menu dropdown-menu-dark" style="display: block;">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                          <li><a class="dropdown-item" href="#">Женщинам</a></li>
+                                          <li><a class="dropdown-item" href="#">Обувь</a></li>
+                                          <li><a class="dropdown-item" href="#">Детям</a></li>
+                                          <li><a class="dropdown-item" href="#">Мужчинам</a></li>
+                                          <li><a class="dropdown-item" href="#">Дом</a></li>
+                                          <li><a class="dropdown-item" href="#">Красота</a></li>
+                                          <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="nav-item dropdown links-category-shoes" style="display: none;padding-left: 12px;">
+                                      <ul class="dropdown-menu dropdown-menu-dark" style="display: block;">
+                                        <li><a class="dropdown-item" href="#">Мужчинам</a></li>
+                                        <li><a class="dropdown-item" href="#">Дом</a></li>
+                                        <li><a class="dropdown-item" href="#">Красота</a></li>
+                                        <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                                        <li><a class="dropdown-item" href="#">Электроника</a></li>
+                                        <li><a class="dropdown-item" href="#">Игрушки</a></li>
+                                        <li><a class="dropdown-item" href="#">Мебель</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -273,7 +289,7 @@
         
     </footer>
 
-    <footer class="bg-dark text-center text-white">
+    <footer class="text-center text-white">
         <div class="container p-4">
             <div style="display: flex;justify-content: center;">
                 <section class="mb-4" style="display: flex;flex-wrap: nowrap;">

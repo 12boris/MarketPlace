@@ -20,4 +20,37 @@
         {% endblock %}
 
     </body>
+
+    <script>
+
+        const main_menu = document.getElementsByClassName('navbar-nav')[0]
+
+        // меню каталога
+        let category_menu = document.getElementsByClassName('main-dropdown')[0].getElementsByClassName('dropdown-item')
+        console.log(category_menu)
+        for (let i = 0; i < category_menu.length; i++){
+            category_menu[i].onclick = function(el){
+                // цикл установки дисплея none
+                linkes_categoryes_menu = document.getElementsByClassName('nav-item')
+                for (let ii = 1; ii < linkes_categoryes_menu.length; ii++){
+                    if (String(linkes_categoryes_menu[ii].className).split(' ')[2] != "main-dropdown"){
+                        linkes_categoryes_menu[ii].style.display = 'none'
+                        console.log('asdasda', linkes_categoryes_menu[ii])
+                    }
+                }
+                
+                try{
+                    link_name = String(category_menu[i].className).split(' ')[1]
+                    block_category_menu = category_menu[i].parentNode.parentNode.parentNode.parentNode.querySelector(`.links-category-${link_name}`)
+                    block_category_menu.style.display = 'block'
+                    console.log(link_name, block_category_menu)
+                }
+                catch{
+                    console.log('sdffsdfsf')
+                }
+            }
+        }
+
+    </script>
+
 </html>
